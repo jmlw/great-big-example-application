@@ -36,10 +36,10 @@ want to make something that totally works and who don't have any opinions yet)
 
 "Bloated!!"
 
-There's a strange resistance to using big examples to educate in addition to small ones. Should you learn
-automechanics using only go-karts? Heart surgery using only mice? I don't really understand the resistance. 
-The case seems pretty plain to me but for clarity, here are some reasons why I think software development 
-should be taught using big examples:
+There's a strange resistance to using big examples structured as an educator does her real work to teach 
+people how to do theirs. Should you learn automechanics using only go-karts? Construction using only legos? 
+I don't really understand the resistance. The case seems pretty plain to me but for clarity, here are some 
+reasons why I think software development should be taught using big examples without the corners cut off:
 
     1. Real code answers every question, not just what the authors of tutorials choose to answer through
     their choices of simplifications.

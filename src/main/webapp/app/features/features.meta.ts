@@ -8,6 +8,10 @@ export const features = [
         link: 'books'
     },
     {
+        id: 'blog',
+        link: 'blog'
+    },
+    {
         id: 'booksFind',
         link: 'books/find'
     },
@@ -42,6 +46,10 @@ export const features = [
     {
         id: 'notes',
         link: 'notes'
+    },
+    {
+        id: 'talks',
+        link: 'talks'
     },
     {
         id: 'wiki',

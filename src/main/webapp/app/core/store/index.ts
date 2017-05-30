@@ -17,6 +17,8 @@ import { Note } from './note/note.model';
 import { Rebuttal, initialRebuttal } from './rebuttal/rebuttal.model';
 import { Session } from './session/session.model';
 import { User } from './user/user.model';
+import { Talk } from './talk/talk.model';
+import { Talks } from './talk/talks.model';
 
 /**
  * The createSelector function is one of our most handy tools. In basic terms, you give
@@ -66,6 +68,7 @@ import * as fromNotes from './note/note.reducer';
 import * as fromRebuttals from './rebuttal/rebuttal.reducer';
 import * as fromSearch from './search/search.reducer';
 import * as fromSession from './session/session.reducer';
+import * as fromTalks from './talk/talk.reducer';
 import { gameReducer, gamesReducer, p2pGameReducer } from './game/game.reducer';
 import { Entities } from './entity/entity.model';
 import { IDs } from './id/id.model';
@@ -90,6 +93,7 @@ export interface RootState {
     router: fromRouter.RouterState;
     search: IDs;
     session: Session;
+    talk: Talks;
 }
 
 /**
@@ -119,6 +123,7 @@ const reducers = {
     search: fromSearch.reducer,
     session: fromSession.reducer,
     message: fromMessages.reducer,
+    talk: fromTalks.reducer,
     p2pGame: p2pGameReducer
 };
 
@@ -220,6 +225,7 @@ export const getBerniePageState = createSelector(getLayoutState, fromLayout.getB
 export const getHeroSearchTerm = createSelector(getLayoutState, fromLayout.getHeroSearchTerm);
 export const getSearchQuery = createSelector(getLayoutState, fromLayout.getQuery);
 export const getBernieSearchTerm = createSelector(getLayoutState, fromLayout.getBernieSearchTerm);
+export const getTalksPageFilters = createSelector(getLayoutState, fromLayout.getTalksPageFilters);
 
 /**
  * Session Selectors
@@ -370,3 +376,22 @@ export const getMessages = createSelector(getMessageEntities, getMessageIds, (en
     return ids.map((id) => entities[id]);
 });
 export const getMessage = createSelector(getMessagesState, fromMessages.getSelected);
+
+/**
+ * Talks Selectors
+ */
+export const getTalksState = (state: RootState) => state.talk;
+export const getTalks = createSelector(getTalksState, fromTalks.getTalks);
+export const getFilteredTalks = createSelector(getTalksState, fromTalks.getFilteredTalks);
+export const getRouterState = (state: RootState) => state.router;
+export const getSelectedTalk = createSelector(getTalksState, getRouterState, (talks, router) => {
+    let talkId = router.path;
+    talkId = '123';
+    return talks.talks[talkId];
+});
+export const getWatched = createSelector(getTalksState, getRouterState, (talks, router) => {
+    // return this.store.state.watched[+this.route.snapshot.params['id']];
+    let talkId = router.path;
+    talkId = '123';
+    return true;
+});

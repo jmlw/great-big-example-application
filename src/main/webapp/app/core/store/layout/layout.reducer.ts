@@ -30,3 +30,5 @@ export const getMsg = (state: Layout) => state.msg;
 export const getHeroSearchTerm = (state: Layout) => state.heroesDashboardPage.heroSearchTerm;
 
 export const getQuery = (state: Layout) => state.booksPage.query;
+
+export const getTalksPageFilters = (state: Layout) => state.talksPage.filters;
