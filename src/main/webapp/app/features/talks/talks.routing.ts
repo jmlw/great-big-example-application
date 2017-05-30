@@ -12,20 +12,20 @@ const routes: Routes =
     [
         {
             path: '',
-            canActivateChild: [StoreAndRouterConnectorGuard],
+            // canActivateChild: [StoreAndRouterConnectorGuard],
             children: [
+                // {
+                //     path: '', pathMatch: 'full', redirectTo: 'talks',
+                //     data: {
+                //         authorities: ['ROLE_USER'],
+                //         pageTitle: 'greatBigExampleApplicationApp.talks.home.title',
+                //         source: 'https://github.com/vsavkin/state-app-examples/tree/redux_with_router',
+                //         tags: ['redux', 'routing']
+                //     },
+                //     canActivate: [UserRouteAccessService]
+                // },
                 {
-                    path: '', pathMatch: 'full', redirectTo: 'talks',
-                    data: {
-                        authorities: ['ROLE_USER'],
-                        pageTitle: 'greatBigExampleApplicationApp.talks.home.title',
-                        source: 'https://github.com/vsavkin/state-app-examples/tree/redux_with_router',
-                        tags: ['redux', 'routing']
-                    },
-                    canActivate: [UserRouteAccessService]
-                },
-                {
-                    path: 'talks', component: TalksAndFiltersPage,
+                    path: '', component: TalksAndFiltersPage,
                     data: {
                         authorities: ['ROLE_USER'],
                         pageTitle: 'greatBigExampleApplicationApp.talks.home.title',

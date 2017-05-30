@@ -8,10 +8,6 @@ export const features = [
         link: 'books'
     },
     {
-        id: 'blog',
-        link: 'blog'
-    },
-    {
         id: 'booksFind',
         link: 'books/find'
     },
