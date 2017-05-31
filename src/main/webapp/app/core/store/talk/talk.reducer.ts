@@ -18,9 +18,8 @@ export type Rate = { type: 'RATE', talkId: number, rating: number };
 export type Unrate = { type: 'UNRATE', talkId: number, error: any };
 export type Action = RouterNavigation | Watch | Rate | Unrate;
 
-
-export function reducer(backend: TalkBackendService, watch: TalkWatchService) {
-    return (state: Talks = initialTalks({}), action: Action, store?: Store<fromRoot.RootState>): Talks | Observable<Talks> => {
+export function makeReducer(backend: TalkBackendService, watch: TalkWatchService, store: Store<fromRoot.RootState>) {
+    return (state: Talks = initialTalks({}), action: Action): Talks | Observable<Talks> => {
         switch (action.type) {
             case 'ROUTER_NAVIGATION':
                 const route = action.state.root.firstChild.firstChild;

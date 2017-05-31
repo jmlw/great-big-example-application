@@ -123,7 +123,7 @@ const reducers = {
     search: fromSearch.reducer,
     session: fromSession.reducer,
     message: fromMessages.reducer,
-    talk: fromTalks.reducer,
+    talk: fromTalks.makeReducer(backend, watch, store),
     p2pGame: p2pGameReducer
 };
 
@@ -389,6 +389,13 @@ export const getSelectedTalk = createSelector(getTalksState, getRouterState, (ta
     talkId = '123';
     return talks.talks[talkId];
 });
+// getSelectedTalk() {
+//   const talkId$ = this.route.params.map(p => p.id);
+
+//   return talkId$.withLatestFrom(this.getTalks(), (selected, talks) => {
+//     return talks.find(talk => talk.id === selected);
+//   });
+// }
 export const getWatched = createSelector(getTalksState, getRouterState, (talks, router) => {
     // return this.store.state.watched[+this.route.snapshot.params['id']];
     let talkId = router.path;

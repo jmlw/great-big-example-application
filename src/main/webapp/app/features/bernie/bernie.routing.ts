@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Store } from '@ngrx/store';
 
 import { BerniePage } from './bernie.page';
 import { UserRouteAccessService } from '../../shared';
+import { ClaimsResolver } from './claims.resolver';
 
 const routes: Routes = [
     {
@@ -23,6 +25,9 @@ const routes: Routes = [
             source: 'http://www.bernierebuttals.org',
             tags: ['drag-n-drop', 'forms']
         },
+        resolve: {
+            deepClaims: ClaimsResolver
+        },
         canActivate: [UserRouteAccessService]
     }
 ];
@@ -30,7 +35,14 @@ const routes: Routes = [
 export const routedComponents = [BerniePage];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+    imports: [
+        RouterModule.forChild(routes)
+    ],
+    exports: [
+        RouterModule
+    ],
+    providers: [
+        ClaimsResolver
+    ]
 })
 export class BernieRouting { }
