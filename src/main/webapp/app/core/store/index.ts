@@ -19,6 +19,8 @@ import { Session } from './session/session.model';
 import { User } from './user/user.model';
 import { Talk } from './talk/talk.model';
 import { Talks } from './talk/talks.model';
+import { TalkWatchService } from '../services/talk-watch.service';
+import { TalkBackendService } from '../services/talk-backend.service';
 
 /**
  * The createSelector function is one of our most handy tools. In basic terms, you give

@@ -56,7 +56,7 @@ reasons why I think software development should be taught using big examples wit
 
     3. If you want a job making commercial-grade code, you should study commercial-grade code,
     not tutorial-grade code. Anything you learn in a tutorial must be handled with caution 
-    because corners have probably been cut (e.g. the back-end, auth, etc), and it probably doesn't 
+    because corners have probably been cut (e.g. the back-end, auth, validation, etc), and it probably doesn't 
     show you the exact way anyone does it on a real job. The difference between exact and almost 
     exact is the difference between ten stones balanced on top of each other and those stones lying on
     the ground. You keep your job and the company makes money only if *everything* works.
