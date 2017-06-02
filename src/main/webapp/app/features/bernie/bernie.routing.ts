@@ -11,9 +11,7 @@ const routes: Routes = [
         path: '', component: BerniePage,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'greatBigExampleApplicationApp.bernie.home.title',
-            source: 'http://www.bernierebuttals.org',
-            tags: ['drag-n-drop', 'forms']
+            pageTitle: 'greatBigExampleApplicationApp.bernie.home.title'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -21,9 +19,10 @@ const routes: Routes = [
         path: ':claimId', component: BerniePage,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'greatBigExampleApplicationApp.bernie.home.title',
-            source: 'http://www.bernierebuttals.org',
-            tags: ['drag-n-drop', 'forms']
+            pageTitle: 'greatBigExampleApplicationApp.bernie.home.title'
+        },
+        resolve: {
+            deepClaims: ClaimsResolver
         },
         resolve: {
             deepClaims: ClaimsResolver
