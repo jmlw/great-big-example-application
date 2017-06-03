@@ -54,16 +54,16 @@ module.exports = function(options) {
                 },
                 {
                     test: /\.scss$/,
-                    exclude: /node_modules|global/,
-                    use: ['raw-loader', 'sass-loader']
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
+                    exclude: /(vendor\.scss|global\.scss)/
                 },
                 {
                     test: /global\.scss$/,
                     use: ['style-loader', 'css-loader', 'sass-loader']
                 },
                 {
-                    test: /(vendor\.css|global\.css)/,
-                    loaders: ['style-loader', 'css-loader']
+                    test: /(vendor\.scss|global\.scss)/,
+                    loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i,
@@ -110,7 +110,7 @@ module.exports = function(options) {
                         { pattern: "./src/main/webapp/i18n/de/*.json", fileName: "./target/www/i18n/de/all.json" },
                         { pattern: "./src/main/webapp/i18n/es/*.json", fileName: "./target/www/i18n/es/all.json" }
                         // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
-                 ]
+                    ]
                 }
             }),
             new HtmlWebpackPlugin({

@@ -1,4 +1,5 @@
 @import '../../../theme/sass/conf/conf';
+$THEME_ROOT: '../../../../content/img/theme/';
 
 :host /deep/ .feed-messages-container {
 
@@ -44,7 +45,7 @@
         &.video-message {
           background: $video-message-color;
           &:after {
-            @include bg-image('theme/icon/feed/feed-video.svg');
+            background-image: url($THEME_ROOT + 'icon/feed/feed-video.svg')
           }
         }
         &.image-message {
@@ -55,7 +56,7 @@
             margin-top: 1px;
             margin-left: 1px;
             border-radius: 5px;
-            @include bg-image('theme/icon/feed/feed-image.svg');
+            background-image: url($THEME_ROOT + 'icon/feed/feed-image.svg')
           }
         }
         &.geo-message {
@@ -63,7 +64,7 @@
           &:after {
             width: 22px;
             height: 22px;
-            @include bg-image('theme/icon/feed/feed-location.svg');
+            background-image: url($THEME_ROOT + 'icon/feed/feed-location.svg')
           }
         }
       }
