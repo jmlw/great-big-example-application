@@ -1,4 +1,4 @@
-export const IMAGES_ROOT = 'content/images/';
+export const IMAGES_ROOT = 'content/img/';
 
 export const layoutSizes = {
     resWidthCollapseSidebar: 1200,
@@ -9,8 +9,8 @@ export const layoutPaths = {
     images: {
         root: IMAGES_ROOT,
         profile: IMAGES_ROOT + 'app/profile/',
-        amMap: 'content/images/theme/vendor/ammap/',
-        amChart: 'content/images/theme/vendor/amcharts/dist/amcharts/images/'
+        amMap: 'content/img/theme/vendor/ammap/',
+        amChart: 'content/img/theme/vendor/amcharts/dist/amcharts/img/'
     }
 };
 

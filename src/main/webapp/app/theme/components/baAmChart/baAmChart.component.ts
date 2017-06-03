@@ -3,8 +3,6 @@ import { Component, ViewChild, Input, Output, ElementRef, EventEmitter } from '@
 import { BaThemePreloader } from '../../../theme/services';
 
 import 'amcharts3';
-// import { AmCharts } from 'amcharts3';
-// import * as AmCharts from 'amcharts3/amcharts/amcharts';
 import 'amcharts3/amcharts/plugins/responsive/responsive.js';
 import 'amcharts3/amcharts/serial.js';
 

@@ -15,7 +15,7 @@ export class BaMsgCenterService {
             time: '2 hrs ago'
         },
         {
-            image: 'content/images/shopping-cart.svg',
+            image: 'content/img/shopping-cart.svg',
             text: 'New orders received.',
             time: '5 hrs ago'
         },
@@ -30,7 +30,7 @@ export class BaMsgCenterService {
             time: '2 days ago'
         },
         {
-            image: 'content/images/comments.svg',
+            image: 'content/img/comments.svg',
             text: 'New comments on your post.',
             time: '3 days ago'
         },
