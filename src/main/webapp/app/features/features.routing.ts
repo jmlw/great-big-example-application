@@ -15,7 +15,7 @@ const routes: Routes = [
             { path: 'chat', loadChildren: './chat/chat.module#ChatModule' },
             { path: 'contacts', loadChildren: './contact/contact.module#ContactModule' },
             { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
-            { path: 'dashboard', loadChildren: './dashboard/index#DashboardModule' },
+            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'game', loadChildren: './game/game.module#GameModule' },
             { path: 'heroes', loadChildren: './heroes/heroes.module#HeroesModule' },
             { path: 'messages', loadChildren: './messages/messages.module#MessagesModule' },

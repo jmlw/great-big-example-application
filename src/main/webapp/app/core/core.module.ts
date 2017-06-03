@@ -8,7 +8,9 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { NgaModule } from '../theme/nga.module';
 import { reducer } from './store';
 
 /**
@@ -31,9 +33,17 @@ import { SocketService } from './services/socket.service';
 import { UserService } from './services/user.service';
 import { customHttpProvider } from '../blocks/interceptor/http.provider';
 
+import { AppState, InternalStateType } from '../app.service';
+import { GlobalState } from '../global.state';
+
+// Application wide providers
+const APP_PROVIDERS = [
+    AppState,
+    GlobalState
+];
 // Reset the root state for HMR
 function stateSetter(reducer: ActionReducer<any>): ActionReducer<any> {
-    return function(state, action) {
+    return function (state, action) {
         if (action.type === 'SET_ROOT_STATE') {
             return action.payload;
         }
@@ -54,6 +64,8 @@ const imports = [
     RouterModule,
     GreatBigExampleApplicationSharedModule,
     MaterialModule,
+    NgaModule.forRoot(),
+    NgbModule.forRoot(),
     FlexLayoutModule,
 
     // StoreLogMonitorModule,
@@ -113,7 +125,8 @@ if (process.env === 'dev') {
         RESTService,
         SocketService,
         UserService,
-        customHttpProvider()
+        customHttpProvider(), // expose our Services and Providers into Angular's dependency injection
+        APP_PROVIDERS
     ]
 })
 
