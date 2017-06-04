@@ -55,15 +55,15 @@ module.exports = function(options) {
                 {
                     test: /\.scss$/,
                     loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
-                    exclude: /(vendor\.scss|global\.scss)/
+                    exclude: /node_modules|global/,
                 },
                 {
                     test: /global\.scss$/,
                     use: ['style-loader', 'css-loader', 'sass-loader']
                 },
                 {
-                    test: /(vendor\.scss|global\.scss)/,
-                    loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+                    test: /(vendor\.css|global\.css)/,
+                    loaders: ['style-loader', 'css-loader']
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i,

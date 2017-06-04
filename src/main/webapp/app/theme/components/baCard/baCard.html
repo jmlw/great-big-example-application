@@ -1,6 +1,7 @@
 <div baCardBlur class="animated fadeIn card {{cardType}} {{baCardClass || ''}}" zoom-in>
     <div *ngIf="title" class="card-header clearfix">
         <h3 class="card-title" jhiTranslate={{title}}></h3>
+        <h1 class="display-4" jhiTranslate="home.title">Welcome!</h1>
     </div>
     <div class="card-body">
         <ng-content></ng-content>
