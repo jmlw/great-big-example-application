@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
-import { Dashboard } from './dashboard.component';
-import { routing } from './dashboard.routing';
+import { DashboardPage } from './dashboard.page';
+import { DashboardRouting } from './dashboard.routing';
 import { GreatBigExampleApplicationSharedModule } from '../../shared';
 import { PopularApp } from './popularApp';
 import { PieChart } from './pieChart';
@@ -28,7 +28,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
         FormsModule,
         GreatBigExampleApplicationSharedModule,
         NgaModule,
-        routing
+        DashboardRouting
     ],
     declarations: [
         PopularApp,
@@ -39,7 +39,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
         Feed,
         Todo,
         Calendar,
-        Dashboard
+        DashboardPage
     ],
     providers: [
         CalendarService,

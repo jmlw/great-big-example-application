@@ -1,17 +1,33 @@
-import { Routes, RouterModule }  from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { Dashboard } from './dashboard.component';
-import { ModuleWithProviders } from '@angular/core';
+import { CanDeactivateGuard } from '../../shared/can-deactivate/can-deactivate.guard';
+import { SelectivePreloadingStrategy } from '../../shared/selective-preloading-strategy';
+import { DashboardPage } from './dashboard.page';
+import { UserRouteAccessService } from '../../shared';
 
-// noinspection TypeScriptValidateTypes
-export const routes: Routes = [
-  {
-    path: '',
-    component: Dashboard,
-    children: [
-      //{ path: 'treeview', component: TreeViewComponent }
-    ]
-  }
+const routes: Routes = [
+    {
+        path: '',
+        component: DashboardPage,
+        data: {
+            authorities: ['ROLE_USER'],
+            pageTitle: 'dashboard.home.title'
+        },
+        canActivate: [UserRouteAccessService]
+    }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forChild(routes);
+@NgModule({
+    imports: [
+        RouterModule.forChild(routes)
+    ],
+    exports: [
+        RouterModule
+    ],
+    providers: [
+        CanDeactivateGuard,
+        SelectivePreloadingStrategy
+    ]
+})
+export class DashboardRouting { }

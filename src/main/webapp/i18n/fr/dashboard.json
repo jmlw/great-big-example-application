@@ -1,32 +1,30 @@
 {
-    "greatBigExampleApplicationApp": {
-        "dashboard": {
-            "home": {
-                "title": "Dashboard"
-            },
-            "acquisitionChannels": "Acquisition Channels",
-            "usersByCountry": "Users by Country",
-            "revenue": "Revenue",
-            "feed": "Feed",
-            "todoList": "To Do List",
-            "calendar": "Calendar",
-            "newVisits": "New Visits",
-            "purchases": "Purchases",
-            "active_users": "Active Users",
-            "returned": "Returned",
-            "popularApp": {
-                "superApp": "Super App",
-                "mostPopularApp": "Most Popular App",
-                "totalVisits": "Total Visits",
-                "newVisits": "New Visits",
-                "sales": "Sales"
-            },
-            "todo": {
-                "taskTodo": "Task to do.."
-            },
-            "trafficChart": {
-                "viewTotal": "Views Total"
-            }
+    "dashboard": {
+        "home": {
+            "title": "Tableau de bord"
+        },
+        "acquisitionChannels": "Canaux d'acquisition",
+        "usersByCountry": "Utilisateurs par pays",
+        "revenue": "Revenu",
+        "feed": "Feed",
+        "todoList": "To Do List",
+        "calendar": "calendrier",
+        "newVisits": "Nouvelles visites",
+        "purchases": "Achats",
+        "active_users": "Utilisateurs actifs",
+        "returned": "Renvoyé",
+        "popularApp": {
+            "superApp": "Super App",
+            "mostPopularApp": "application la plus populaire",
+            "totalVisits": "Visites totales",
+            "newVisits": "Nouvelles visites",
+            "sales": "Ventes"
+        },
+        "todo": {
+            "taskTodo": "tâche à faire ..."
+        },
+        "trafficChart": {
+            "viewTotal": "Views Total"
         }
     }
 }

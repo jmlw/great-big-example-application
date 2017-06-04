@@ -209,6 +209,7 @@ auto-refreshes when files change on your hard drive.
 |:-- |:-- |
 | application.yml | spring.social.google.client-id, etc |
 | application-prod.yml | spring.data.elasticsearch.cluster-name, spring.data.elasticsearch.cluster-nodes |
+| index.html | Google Analytics ID |
 
 [Yarn][] is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `yarn update` and `yarn install` to manage dependencies.
