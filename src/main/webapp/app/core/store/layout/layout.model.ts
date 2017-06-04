@@ -27,7 +27,6 @@ export interface Layout {
     berniePage: BerniePageLayout;
     heroesDashboardPage: HeroesDashboardLayout;
     msg: string;
-    nav: NavLayout;
     talksPage: TalksPageLayout;
 }
 
@@ -37,7 +36,6 @@ export function initialLayout() {
         booksPage: initialBooksPageLayout,
         heroesDashboardPage: initialHeroesDashboardPageLayout,
         msg: '',
-        nav: initialNavLayout,
         talksPage: initialTalksPageLayout
     };
 }

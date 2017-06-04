@@ -24,9 +24,6 @@ const routes: Routes = [
         resolve: {
             deepClaims: ClaimsResolver
         },
-        resolve: {
-            deepClaims: ClaimsResolver
-        },
         canActivate: [UserRouteAccessService]
     }
 ];
