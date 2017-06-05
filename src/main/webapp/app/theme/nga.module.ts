@@ -6,130 +6,130 @@ import { NgUploaderModule } from 'ngx-uploader';
 import { GreatBigExampleApplicationSharedModule } from '../shared';
 
 import {
-  BaThemeConfig
+    BaThemeConfig
 } from './theme.config';
 
 import {
-  BaThemeConfigProvider
-} from './theme.configProvider';
+    BaThemeConfigProvider
+} from './theme.config-provider';
 
 import {
-  BaAmChart,
-  BaBackTop,
-  BaCard,
-  BaChartistChart,
-  BaCheckbox,
-  BaContentTop,
-  BaFullCalendar,
-  BaMenuItem,
-  BaMenu,
-  BaMsgCenter,
-  BaMultiCheckbox,
-  BaPageTop,
-  BaPictureUploader,
-  BaSidebar,
-  BaFileUploader
+    BaAmChart,
+    BaBackTop,
+    BaCard,
+    BaChartistChart,
+    BaCheckbox,
+    BaContentTop,
+    BaFullCalendar,
+    BaMenuItem,
+    BaMenu,
+    BaMsgCenter,
+    BaMultiCheckbox,
+    BaPageTop,
+    BaPictureUploader,
+    BaSidebar,
+    BaFileUploader
 } from './components';
 
-import { BaCardBlurDirective } from './components/baCard/baCardBlur.directive';
+import { BaCardBlurDirective } from './components/ba-card/ba-card-blur.directive';
 
 import {
-  BaScrollPositionDirective,
-  BaSlimScrollDirective,
-  BaThemeRunDirective
+    BaScrollPositionDirective,
+    BaSlimScrollDirective,
+    BaThemeRunDirective
 } from './directives';
 
 import {
-  BaAppPicturePipe,
-  BaKameleonPicturePipe,
-  BaProfilePicturePipe
+    BaAppPicturePipe,
+    BaKameleonPicturePipe,
+    BaProfilePicturePipe
 } from './pipes';
 
 import {
-  BaImageLoaderService,
-  BaMenuService,
-  BaThemePreloader,
-  BaThemeSpinner
+    BaImageLoaderService,
+    BaMenuService,
+    BaThemePreloader,
+    BaThemeSpinner
 } from './services';
 
 import {
-  EmailValidator,
-  EqualPasswordsValidator
+    EmailValidator,
+    EqualPasswordsValidator
 } from './validators';
 
 const NGA_COMPONENTS = [
-  BaAmChart,
-  BaBackTop,
-  BaCard,
-  BaChartistChart,
-  BaCheckbox,
-  BaContentTop,
-  BaFullCalendar,
-  BaMenuItem,
-  BaMenu,
-  BaMsgCenter,
-  BaMultiCheckbox,
-  BaPageTop,
-  BaPictureUploader,
-  BaSidebar,
-  BaFileUploader
+    BaAmChart,
+    BaBackTop,
+    BaCard,
+    BaChartistChart,
+    BaCheckbox,
+    BaContentTop,
+    BaFullCalendar,
+    BaMenuItem,
+    BaMenu,
+    BaMsgCenter,
+    BaMultiCheckbox,
+    BaPageTop,
+    BaPictureUploader,
+    BaSidebar,
+    BaFileUploader
 ];
 
 const NGA_DIRECTIVES = [
-  BaScrollPositionDirective,
-  BaSlimScrollDirective,
-  BaThemeRunDirective,
-  BaCardBlurDirective
+    BaScrollPositionDirective,
+    BaSlimScrollDirective,
+    BaThemeRunDirective,
+    BaCardBlurDirective
 ];
 
 const NGA_PIPES = [
-  BaAppPicturePipe,
-  BaKameleonPicturePipe,
-  BaProfilePicturePipe
+    BaAppPicturePipe,
+    BaKameleonPicturePipe,
+    BaProfilePicturePipe
 ];
 
 const NGA_SERVICES = [
-  BaImageLoaderService,
-  BaThemePreloader,
-  BaThemeSpinner,
-  BaMenuService
+    BaImageLoaderService,
+    BaThemePreloader,
+    BaThemeSpinner,
+    BaMenuService
 ];
 
 const NGA_VALIDATORS = [
-  EmailValidator,
-  EqualPasswordsValidator
+    EmailValidator,
+    EqualPasswordsValidator
 ];
 
 @NgModule({
-  declarations: [
-    ...NGA_PIPES,
-    ...NGA_DIRECTIVES,
-    ...NGA_COMPONENTS
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    GreatBigExampleApplicationSharedModule,
-    NgUploaderModule
-  ],
-  exports: [
-    ...NGA_PIPES,
-    ...NGA_DIRECTIVES,
-    ...NGA_COMPONENTS
-  ]
+    declarations: [
+        ...NGA_PIPES,
+        ...NGA_DIRECTIVES,
+        ...NGA_COMPONENTS
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        GreatBigExampleApplicationSharedModule,
+        NgUploaderModule
+    ],
+    exports: [
+        ...NGA_PIPES,
+        ...NGA_DIRECTIVES,
+        ...NGA_COMPONENTS
+    ]
 })
 export class NgaModule {
-  static forRoot(): ModuleWithProviders {
-    return <ModuleWithProviders>{
-      ngModule: NgaModule,
-      providers: [
-        BaThemeConfigProvider,
-        BaThemeConfig,
-        ...NGA_VALIDATORS,
-        ...NGA_SERVICES
-      ],
-    };
-  }
+    static forRoot(): ModuleWithProviders {
+        return <ModuleWithProviders>{
+            ngModule: NgaModule,
+            providers: [
+                BaThemeConfigProvider,
+                BaThemeConfig,
+                ...NGA_VALIDATORS,
+                ...NGA_SERVICES
+            ],
+        };
+    }
 }

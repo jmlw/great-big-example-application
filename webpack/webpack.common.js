@@ -67,7 +67,12 @@ module.exports = function(options) {
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i,
-                    loaders: ['file-loader?hash=sha512&digest=hex&name=[hash].[ext]']
+                    loaders: ['file-loader?hash=sha512&digest=hex&name=[hash].[ext]'],
+                    // include: [path.resolve(__dirname, '/webapp/content')]
+                    // include: [path.resolve(__dirname, '/src/main/webapp/content/**')]
+                    // include: '/src/main/webapp/content/**'
+                    // include: ['/src/main/webapp/content/**']
+                    // include: [',', path.resolve(__dirname, '/src/main/webapp/content/img/**')]
                 },
                 {
                     test: /app.constants.ts$/,

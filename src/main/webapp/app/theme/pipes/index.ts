@@ -1,3 +1,3 @@
-export * from './baProfilePicture';
-export * from './baAppPicture';
-export * from './baKameleonPicture';
+export * from './ba-profile-picture';
+export * from './ba-app-picture';
+export * from './ba-kameleon-picture';

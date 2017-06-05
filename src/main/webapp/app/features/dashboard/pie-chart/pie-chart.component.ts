@@ -29,7 +29,7 @@ export class PieChart implements AfterViewInit {
 
     private _loadPieCharts() {
 
-        jQuery('.chart').each(function () {
+        jQuery('.chart').each(() => {
             const chart = jQuery(this);
             chart.easyPieChart({
                 easing: 'easeOutBounce',
@@ -50,7 +50,7 @@ export class PieChart implements AfterViewInit {
     private _updatePieCharts() {
         const getRandomArbitrary = (min, max) => Math.random() * (max - min) + min;
 
-        jQuery('.pie-charts .chart').each(function (index, chart) {
+        jQuery('.pie-charts .chart').each((index, chart) => {
             jQuery(chart).data('easyPieChart').update(getRandomArbitrary(55, 90));
         });
     }
