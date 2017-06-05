@@ -6,21 +6,21 @@ import { NgaModule } from '../../theme/nga.module';
 import { DashboardPage } from './dashboard.page';
 import { DashboardRouting } from './dashboard.routing';
 import { GreatBigExampleApplicationSharedModule } from '../../shared';
-import { PopularApp } from './popularApp';
-import { PieChart } from './pieChart';
-import { TrafficChart } from './trafficChart';
-import { UsersMap } from './usersMap';
-import { LineChart } from './lineChart';
-import { Feed } from './feed';
-import { Todo } from './todo';
-import { Calendar } from './calendar';
+import { PopularApp } from './popular-app/popular-app.component';
+import { PieChart } from './pie-chart/pie-chart.component';
+import { TrafficChart } from './traffic-chart/traffic-chart.component';
+import { UsersMap } from './users-map/users-map.component';
+import { LineChart } from './line-chart/line-chart.component';
+import { Feed } from './feed/feed.component';
+import { Todo } from './todo/todo.component';
+import { Calendar } from './calendar/calendar.component';
 import { CalendarService } from './calendar/calendar.service';
 import { FeedService } from './feed/feed.service';
-import { LineChartService } from './lineChart/lineChart.service';
-import { PieChartService } from './pieChart/pieChart.service';
+import { LineChartService } from './line-chart/line-chart.service';
+import { PieChartService } from './pie-chart/pie-chart.service';
 import { TodoService } from './todo/todo.service';
-import { TrafficChartService } from './trafficChart/trafficChart.service';
-import { UsersMapService } from './usersMap/usersMap.service';
+import { TrafficChartService } from './traffic-chart/traffic-chart.service';
+import { UsersMapService } from './users-map/users-map.service';
 
 @NgModule({
     imports: [

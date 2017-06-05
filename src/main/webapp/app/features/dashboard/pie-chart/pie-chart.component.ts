@@ -6,8 +6,8 @@ import { PieChartService } from './pie-chart.service';
 
 @Component({
     selector: 'jhi-pie-chart',
-    templateUrl: './pieChart.component.html',
-    styleUrls: ['./pieChart.component.scss']
+    templateUrl: './pie-chart.component.html',
+    styleUrls: ['./pie-chart.component.scss']
 })
 // TODO: move easypiechart to component
 export class PieChart implements AfterViewInit {
