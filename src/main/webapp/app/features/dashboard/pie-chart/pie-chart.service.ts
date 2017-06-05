@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BaThemeConfigProvider, colorHelper } from '../../../theme';
+import { BaThemeConfigProvider, ColorHelper } from '../../../theme';
 
 @Injectable()
 export class PieChartService {
@@ -8,7 +8,7 @@ export class PieChartService {
   }
 
   getData() {
-    let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
+    const pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
     return [
       {
         color: pieColor,

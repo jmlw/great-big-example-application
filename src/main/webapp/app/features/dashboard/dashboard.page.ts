@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { JhiLanguageService } from 'ng-jhipster';
 
 @Component({
-    selector: 'dashboard',
+    selector: 'jhi-dashboard',
     styleUrls: ['./dashboard.page.scss'],
     templateUrl: './dashboard.page.html'
 })

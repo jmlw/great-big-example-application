@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import * as jQuery from 'jquery';
 
-import { TrafficChartService } from './trafficChart.service';
+import { TrafficChartService } from './traffic-chart.service';
 import * as Chart from 'chart.js';
 
 @Component({
-    selector: 'traffic-chart',
-    templateUrl: './trafficChart.html',
-    styleUrls: ['./trafficChart.scss']
+    selector: 'jhi-traffic-chart',
+    templateUrl: './traffic-chart.component.html',
+    styleUrls: ['./traffic-chart.component.scss']
 })
 
 // TODO: move chart.js to it's own component
-export class TrafficChart {
+export class TrafficChart implements AfterViewInit {
 
     public doughnutData: Array<Object>;
 
@@ -24,7 +24,7 @@ export class TrafficChart {
     }
 
     private _loadDoughnutCharts() {
-        let el = jQuery('.chart-area').get(0) as HTMLCanvasElement;
+        const el = jQuery('.chart-area').get(0) as HTMLCanvasElement;
         new Chart(el.getContext('2d')).Doughnut(this.doughnutData, {
             segmentShowStroke: false,
             percentageInnerCutout: 64,
