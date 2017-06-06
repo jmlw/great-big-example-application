@@ -1,7 +1,6 @@
 import { Directive, Input, Output, ElementRef, EventEmitter, OnChanges } from '@angular/core';
-import * as jQuery from 'easy-pie-chart/dist/jquery.easypiechart.js';
 
-import 'jquery-slimscroll';
+// import 'jquery-slimscroll';
 
 @Directive({
     selector: '[baSlimScroll]'

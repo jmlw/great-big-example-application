@@ -1,5 +1,4 @@
 import { Component, ViewChild, HostListener, Input, ElementRef, AfterViewInit } from '@angular/core';
-import * as jQuery from 'easy-pie-chart/dist/jquery.easypiechart.js';
 
 @Component({
     selector: 'ba-back-top',

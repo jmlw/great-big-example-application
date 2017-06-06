@@ -57,6 +57,12 @@ module.exports = function(options) {
                     loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
                     exclude: /node_modules|global/,
                 },
+                // {
+                //     test: /\.scss$/,
+                //     loaders: ['style-loader', 'css-loader', 'sass-loader'],
+                //     include: ['./node_modules/font-awesome/scss/font-awesome.scss', './node_modules/ionicons/scss/ionicons.scss',
+                //         './node_modules/bootstrap/scss/bootstrap.scss', './node_modules/roboto-fontface/css/roboto/sass/roboto-fontface.scss'],
+                // },
                 {
                     test: /global\.scss$/,
                     use: ['style-loader', 'css-loader', 'sass-loader']

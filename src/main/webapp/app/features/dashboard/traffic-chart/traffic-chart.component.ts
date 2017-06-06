@@ -1,5 +1,4 @@
 import { Component, AfterViewInit } from '@angular/core';
-import * as jQuery from 'jquery';
 
 import { TrafficChartService } from './traffic-chart.service';
 import * as Chart from 'chart.js';

@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-import * as jQuery from 'easy-pie-chart/dist/jquery.easypiechart.js';
 
 import { BaMenuService } from '../../services';
 import { GlobalState } from '../../../global.state';
