@@ -33,7 +33,8 @@ for a sample slice of it.
 "Software development is _always_ taught using lots of inconsistent simple examples!!"
 "Every real app is different" (so teaching with none of them is better than with any?)
 "Approaches are a matter of personal preference and shouldn't be imposed" (on beginners who just
-want to make something that totally works and who don't have any opinions yet)
+want to make something that totally works, don't want to waste time learning the wrong way to do things,
+and don't have any preferences yet)
 
 "Bloated!!"
 
@@ -227,16 +228,16 @@ To benefit from TypeScript type definitions from [DefinitelyTyped][] repository 
 
     yarn add --dev --exact @types/leaflet
 
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
+Then you would import the JS and SCSS files specified in library's installation instructions so that [Webpack][] knows about them:
 
 Edit [src/main/webapp/app/vendor.ts](src/main/webapp/app/vendor.ts) file:
 ~~~
 import 'leaflet/dist/leaflet.js';
 ~~~
 
-Edit [src/main/webapp/content/css/vendor.css](src/main/webapp/content/css/vendor.css) file:
+Edit [src/main/webapp/content/css/vendor.scss](src/main/webapp/content/scss/vendor.scss) file:
 ~~~
-@import '~leaflet/dist/leaflet.css';
+@import '~leaflet/dist/leaflet';
 ~~~
 
 Note: there are still few other things remaining to do for Leaflet that we won't detail here.

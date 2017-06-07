@@ -16,7 +16,7 @@ module.exports = function(options) {
     return {
         entry: {
             'polyfills': './src/main/webapp/app/polyfills',
-            'global': './src/main/webapp/content/css/global.css',
+            'global': './src/main/webapp/content/scss/global.scss',
             'main': './src/main/webapp/app/app.main'
         },
         resolve: {
