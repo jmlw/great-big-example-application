@@ -1,3 +1,6 @@
+// Here's a good overview of how to use Webpack with Angular
+// https://angular.io/docs/ts/latest/guide/webpack.html
+
 const webpack = require('webpack');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -5,12 +8,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StringReplacePlugin = require('string-replace-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const MergeJsonWebpackPlugin = require("merge-jsons-webpack-plugin")
+const MergeJsonWebpackPlugin = require("merge-jsons-webpack-plugin");
 const path = require('path');
 
 module.exports = function(options) {
     const DATAS = {
-        VERSION: JSON.stringify(require("../package.json").version),
+        VERSION: JSON.stringify(require('../package.json').version),
         DEBUG_INFO_ENABLED: options.env === 'dev'
     };
     return {
@@ -20,7 +23,7 @@ module.exports = function(options) {
             'main': './src/main/webapp/app/app.main'
         },
         resolve: {
-            extensions: ['.ts', '.js'],
+            extensions: ['.ts', '.js', 'scss'],
             modules: ['node_modules']
         },
         module: {
@@ -48,24 +51,22 @@ module.exports = function(options) {
                     exclude: ['./src/main/webapp/index.html']
                 },
                 {
+                    test: /\.scss$/,
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
+                    exclude: /(vendor\.scss|global\.scss)/
+                },
+                {
+                    test: /(vendor\.scss|global\.scss)/,
+                    loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+                },
+                {
                     test: /\.css$/,
                     loaders: ['to-string-loader', 'css-loader'],
                     exclude: /(vendor\.css|global\.css)/
                 },
                 {
-                    test: /\.scss$/,
-                    loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
-                    exclude: /node_modules|global/,
-                },
-                // {
-                //     test: /\.scss$/,
-                //     loaders: ['style-loader', 'css-loader', 'sass-loader'],
-                //     include: ['./node_modules/font-awesome/scss/font-awesome.scss', './node_modules/ionicons/scss/ionicons.scss',
-                //         './node_modules/bootstrap/scss/bootstrap.scss', './node_modules/roboto-fontface/css/roboto/sass/roboto-fontface.scss'],
-                // },
-                {
-                    test: /global\.scss$/,
-                    use: ['style-loader', 'css-loader', 'sass-loader']
+                    test: /(vendor\.css|global\.css)/,
+                    loaders: ['style-loader', 'css-loader']
                 },
                 {
                     test: /(vendor\.css|global\.css)/,

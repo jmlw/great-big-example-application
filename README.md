@@ -220,11 +220,11 @@ The `yarn run` command will list all of the scripts available to run for this pr
 
 ### Managing dependencies
 
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
+For example, to add [Leaflet][] library as a runtime dependency of your application, you would run the following command:
 
     yarn add --exact leaflet
 
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
+To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run the following command:
 
     yarn add --dev --exact @types/leaflet
 
